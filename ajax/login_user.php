@@ -1,6 +1,5 @@
 <?php
-	session_start();
-	include("../settings/connect_datebase.php");
+include("../settings/connect_datebase.php");
 	
 	$login = $_POST['login'];
 	$password = $_POST['password'];
@@ -14,7 +13,7 @@
 	}
 	
 	if($id != -1) {
-		$_SESSION['user'] = $id;
+		set_auth_user($id);
 	}
 	echo md5(md5($id));
 ?>

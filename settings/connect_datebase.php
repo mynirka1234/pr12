@@ -1,4 +1,6 @@
 <?php
+	require_once(__DIR__ . '/auth.php');
+    
 	$mysqli = new mysqli('localhost', 'root', '', 'security');
 	
 	function getClientIP() {
