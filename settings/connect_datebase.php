@@ -13,7 +13,7 @@
     }
     $user_ip = getClientIP();
 
-	setcookie("IP", $user_ip);
+	setcookie("IP", $user_ip, time() + 3600, "/", "", true, true);
 
-	setcookie("Datetime", date("Y-m-d H:i:s"));
+	setcookie("Datetime", date("Y-m-d H:i:s"), time() + 3600, "/", "", true, true);
 ?>
